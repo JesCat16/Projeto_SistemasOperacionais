@@ -6,14 +6,12 @@ import sys
 hit = 0
 miss = 0
 cont = 0
-t = 0
 tam = int("\n".join(sys.argv[1])) #dá set no tamanho das pages
 lista = [-1] * tam #cria a lista de pages vazias
 lis = list(map(int,sys.argv[2].split(','))) #cria a lista das paginas dos processos
-#print(tam, lis, lista)
 for i in range(len(lis)):
     print(f'pages: {lis[i]}')
-    if lis[i] in lista:
+    if lis[i] in lista: #se der hit
         hit = hit + 1
         for z in range(tam):
             if lis[i] != lista[z]:
@@ -22,7 +20,7 @@ for i in range(len(lis)):
             else:
                 print(f'[{lista[z]}] <- (hit)')
 
-    else:
+    else: #se der miss
         miss= miss + 1
         for z in range(tam):
             if z != cont:
