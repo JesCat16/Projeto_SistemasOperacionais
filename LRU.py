@@ -84,11 +84,11 @@ for p in range(len(lista)): # percorre a lista de paginas
         else: # caso não tenham páginas vazias
             copy = paginas.copy() # faz uma cópia das páginas na memória
             k = p # faz uma cópia da posição atual da lista
-            while k < len(lista): # itera sobre a lista verificando as páginas acessadas mais recentemente para as mais antigas
+            while k >= 0: # itera sobre a lista verificando as páginas acessadas mais recentemente para as mais antigas
                 if len(copy) != 1: # previne que a copia não fique vazia
                     if lista[k] in copy: # caso o elemento esteja na memória
                         copy.pop(copy.index(lista[k])) # retira a página da cópia
-                k = k + 1
+                k = k - 1
             aux = paginas.index(copy[0]) #pega a primeira página disponível   
         paginas[aux] = lista[p] # substitui a página
         printar(paginas, aux, False) # printa as páginas na tela
