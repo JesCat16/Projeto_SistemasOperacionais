@@ -11,11 +11,12 @@ for i in range(len(lis)):
     print(f'pages: {lis[i]}')
     if lis[i] in lista: #se der hit
         hit = hit + 1
-        if lista2[cont2] == lis[i]:
-            if cont2 == tam-2:
-                cont2 = 0
-            else:
-                cont2 += 1
+        if lis[i] in lista2:
+            if lis[i] == lista2[cont2]:
+                if cont2 == tam-2:
+                    cont2 = 0
+                else:
+                    cont2 += 1
         for z in range(tam):
             if lis[i] != lista[z]:
                 print(f'[{lista[z]}]')
@@ -32,12 +33,25 @@ for i in range(len(lis)):
                 cont2 = 0
             else:
                 cont2 += 1
+            print(cont2)
         for z in range(tam):
-            if z != cont:
-                print(f'[{lista[z]}]')
-            else:
+            #if lis[z] in lista2:
+            #    print(f'[{lista[z]}]')
+            #else:
+            #    lista[z] = lis[i]
+            #    print(f'[{lista[z]}] <- (miss)')
+            
+            if lis[z] not in lista2:
                 lista[z] = lis[i]
                 print(f'[{lista[z]}] <- (miss)')
+            else:
+                print(f'[{lista[z]}]')
+        #if lis[i] not in lista2:
+        #    lista2[cont2] = lis[i]
+        #    if cont2 == tam-2:
+        #        cont2 = 0
+        #    else:
+        #        cont2 += 1
         print(lista2)
         if cont == tam-1:
             cont = 0
