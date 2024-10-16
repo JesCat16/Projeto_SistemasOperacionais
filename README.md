@@ -7,7 +7,7 @@ Para executar o programa, pegue o arquivo com o nome do algoritmo que deseja uti
 Exemplo: 
 `python fifo.py 3 1,3,5,4,2,4,2,3,2`
 
-**Membros do Grupo:**
+**Membros do Grupo:**<br>
 Ana Carolina Cogo Nami - RA: 22.124.084-9
 
 Enzo Lima Cassin - RA: 22.124.083-1
