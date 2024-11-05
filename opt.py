@@ -20,7 +20,7 @@ for p in range(len(lista)): # percorre a lista de paginas
     print(f"page: {lista[p]}") # printa a pagina a ser inserida
     if lista[p] in paginas: # caso a pagina já esteja na memória
         hit += 1
-        printar(paginas, p, True)
+        printar(paginas, paginas.index(lista[p]), True)
     else: # caso não esteja
         miss += 1
         if -1 in paginas: # verifica se possui página vazia na memória e preenche a primeira que estiver vazia
